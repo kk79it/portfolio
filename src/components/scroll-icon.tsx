@@ -4,7 +4,7 @@ import HashLink from "./hash-link";
 
 function ScrollIcon() {
   return (
-    <HashLink to={menuitems[1].link} keepHistory>
+    <HashLink to={menuitems[1].hash} keepHistory>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"

@@ -1,15 +1,18 @@
 const menuitems = [
   {
     text: "Top",
-    link: "#top",
+    hash: "#top",
+    path: "top",
   },
   {
     text: "About",
-    link: "#about",
+    hash: "#about",
+    path: "about",
   },
   {
     text: "Skill",
-    link: "#skill",
+    hash: "#skill",
+    path: "skill",
   },
 ];
 
