@@ -2,8 +2,7 @@ import { AnchorHTMLAttributes, MouseEvent } from "react";
 
 type Props = AnchorHTMLAttributes<HTMLAnchorElement> & {
   /**
-   * リンク先
-   * 「#」をつけてください
+   * リンク先 name
    */
   href: string;
 };
@@ -13,7 +12,7 @@ function HashLink({ href, ...rest }: Props) {
     // 要検証
     e.preventDefault();
 
-    const elem = document.getElementById(href.replace("#", ""));
+    const elem = document.querySelector(`[data-name="${href}"]`);
 
     elem?.scrollIntoView({ behavior: "smooth" });
   };

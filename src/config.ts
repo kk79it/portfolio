@@ -1,15 +1,15 @@
 const menuitems = [
   {
     text: "Top",
-    link: "#top",
+    link: "top",
   },
   {
     text: "About",
-    link: "#about",
+    link: "about",
   },
   {
     text: "Articles",
-    link: "#articles",
+    link: "articles",
   },
 ];
 
