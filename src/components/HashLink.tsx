@@ -1,4 +1,4 @@
-import { AnchorHTMLAttributes, MouseEvent, ReactElement } from "react";
+import { AnchorHTMLAttributes, MouseEvent, ReactNode } from "react";
 import { useNavigate } from "react-router-dom";
 
 type Props = AnchorHTMLAttributes<HTMLAnchorElement> & {
@@ -6,7 +6,7 @@ type Props = AnchorHTMLAttributes<HTMLAnchorElement> & {
    * リンク先 name
    */
   to: string;
-  children: ReactElement;
+  children: ReactNode;
 };
 
 function HashLink({ children, to, ...rest }: Props) {
