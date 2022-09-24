@@ -1,4 +1,4 @@
-import styles from "../../styles/topics-about.module.scss";
+import styles from "../../styles/topic-about.module.scss";
 
 function About() {
   return (
