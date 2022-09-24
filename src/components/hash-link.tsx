@@ -7,9 +7,10 @@ type Props = AnchorHTMLAttributes<HTMLAnchorElement> & {
    */
   to: string;
   children: ReactNode;
+  keepHistory?: boolean;
 };
 
-function HashLink({ children, to, ...rest }: Props) {
+function HashLink({ children, to, keepHistory, ...rest }: Props) {
   const navigate = useNavigate();
 
   const handleClick = (e: MouseEvent<HTMLAnchorElement>) => {
@@ -20,7 +21,9 @@ function HashLink({ children, to, ...rest }: Props) {
 
     elem?.scrollIntoView({ behavior: "smooth" });
 
-    navigate(to, { replace: false });
+    if (keepHistory !== true) {
+      navigate(to, { replace: false });
+    }
   };
 
   return (
