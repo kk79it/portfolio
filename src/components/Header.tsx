@@ -1,8 +1,8 @@
 import { Bars3Icon } from "@heroicons/react/24/outline";
 import { menuitems } from "../config";
 import { useReadingTopic } from "../utils/content-observer";
-import HashLink from "./HashLink";
-import TitleIcon from "./TitleIcon";
+import HashLink from "./hash-link";
+import TitleIcon from "./title-icon";
 
 function Header() {
   const readingTopic = useReadingTopic();

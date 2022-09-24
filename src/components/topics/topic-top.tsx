@@ -1,5 +1,5 @@
 import { menuitems } from "../../config";
-import HashLink from "../HashLink";
+import HashLink from "../hash-link";
 
 function Top() {
   return (

@@ -1,5 +1,5 @@
 import { ReactElement } from "react";
-import Header from "./Header";
+import Header from "./header";
 
 type Props = {
   children: ReactElement;

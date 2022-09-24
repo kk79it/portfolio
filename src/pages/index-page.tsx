@@ -1,7 +1,7 @@
 import { useEffect } from "react";
-import About from "../components/topics/About";
-import Skill from "../components/topics/Skill";
-import Top from "../components/topics/Top";
+import About from "../components/topics/tooic-about";
+import Skill from "../components/topics/topic-skill";
+import Top from "../components/topics/topic-top";
 import { useReadingTopicSetter } from "../utils/content-observer";
 
 function IndexPage() {
