@@ -1,5 +1,7 @@
 import { Bars3Icon } from "@heroicons/react/24/outline";
 import TitleIcon from "./TitleIcon";
+import { menuitems } from "../config";
+import HashLink from "./HashLink";
 
 function Header() {
   return (
@@ -8,9 +10,18 @@ function Header() {
         <TitleIcon />
       </div>
       <div className="ml-2 text-lg">テストタイトル</div>
-      <div className="ml-auto rounded border border-gray-400 px-2 py-1">
-        <div className="h-8 w-8 text-gray-600">
-          <Bars3Icon />
+      <div className="ml-auto">
+        <div className="flex">
+          {menuitems.map(({ link, text }) => (
+            <HashLink key={link} to={link}>
+              <div>{text}</div>
+            </HashLink>
+          ))}
+        </div>
+        <div className="rounded border border-gray-400 px-2 py-1 md:hidden">
+          <div className="h-8 w-8 text-gray-600">
+            <Bars3Icon />
+          </div>
         </div>
       </div>
     </header>

@@ -1,6 +1,6 @@
 function Articles() {
   return (
-    <div className="flex min-h-screen items-center justify-center">
+    <div id="skill" className="flex min-h-screen items-center justify-center">
       <div className="min-w-2xl">
         <h2 className="text-4xl font-bold tracking-wider text-gray-700">
           Skill

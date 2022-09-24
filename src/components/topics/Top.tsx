@@ -3,12 +3,12 @@ import HashLink from "../HashLink";
 
 function Top() {
   return (
-    <div className="relative min-h-screen w-full bg-cyan-50 text-gray-700">
+    <div id="top" className="relative min-h-screen w-full bg-cyan-50 text-gray-700">
       <div className="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2">
         <div className="font-noto-sans text-5xl">K-Lab.</div>
       </div>
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 p-8">
-        <HashLink className="cursor-pointer" href={menuitems[1].link}>
+        <HashLink className="cursor-pointer" to={menuitems[1].link}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"

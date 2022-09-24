@@ -1,6 +1,5 @@
 import { ReactElement } from "react";
 import Header from "./Header";
-import Sidebar from "./Sidebar";
 
 type Props = {
   children: ReactElement;

@@ -3,6 +3,7 @@ import styles from "../../styles/topics-about.module.scss";
 function About() {
   return (
     <div
+      id="about"
       className={`${styles.bg_jigsaw} flex min-h-screen items-center justify-center`}
     >
       <div className="max-w-2xl">
