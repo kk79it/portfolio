@@ -13,13 +13,13 @@ function HashLink({ children, to, ...rest }: Props) {
     // 要検証
     e.preventDefault();
 
-    const elem = document.querySelector(`[data-topic="${to}"]`);
+    const elem = document.getElementById(to);
 
     elem?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
-    <a href={to} onClick={handleClick} {...rest}>
+    <a href={"#" + to} onClick={handleClick} {...rest}>
       {children}
     </a>
   );

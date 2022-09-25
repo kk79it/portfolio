@@ -7,8 +7,8 @@ type Props = {
 
 function Layout({ children }: Props) {
   return (
-    <div>
-      <div className="fixed top-0 left-0 w-full">
+    <div className="relative">
+      <div className="fixed top-0 left-0 z-50 w-full">
         <Header />
       </div>
       <div>{children}</div>

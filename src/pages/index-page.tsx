@@ -4,6 +4,7 @@ import About from "../components/topics/about";
 import Home from "../components/topics/home";
 import Skill from "../components/topics/skill";
 import { useReadingTopic } from "../hooks/reading-topic";
+import topics from "../topics.json";
 
 function IndexPage() {
   const [, setReadingTopic] = useReadingTopic();
@@ -13,8 +14,7 @@ function IndexPage() {
       entries
         .filter((entry) => entry.isIntersecting)
         .forEach((entry) => {
-          const target = entry.target as HTMLElement;
-          setReadingTopic(target.dataset.topic || null);
+          setReadingTopic(entry.target.id || null);
         });
     };
 
@@ -23,17 +23,22 @@ function IndexPage() {
       threshold: 0.75,
     });
 
-    const topics = document.querySelectorAll("[data-topic");
-    topics.forEach((topic) => {
+    const topicElements = topics
+      .map(({ path }) => document.getElementById(path))
+      .filter<HTMLElement>(
+        (element): element is HTMLElement => element !== null
+      );
+
+    topicElements.forEach((topic) => {
       observer.observe(topic);
     });
 
     return () => {
-      topics.forEach((topic) => {
+      topicElements.forEach((topic) => {
         observer.unobserve(topic);
       });
     };
-  }, []);
+  }, [setReadingTopic]);
 
   return (
     <Layout>
