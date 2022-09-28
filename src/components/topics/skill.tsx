@@ -2,33 +2,40 @@ const skills = [
   {
     lang: "Java",
     description:
-      "Minecraftのサーバー開発、Swingでデスクトップアプリを作成しました。\nSpring Bootも経験あり。",
+      "Minecraftのサーバー開発、Swingでデスクトップアプリを作成しました。\nSpring Bootも経験あり。オブジェクト指向は相性👍",
     level: 4,
     icon: <JavaIcon />,
   },
   {
-    lang: "JavaScript（TypeScript）",
+    lang: "JavaScript\n(TypeScript)",
     description:
-      "React, Vueできます。Node.jsも多少。\nGoogle Apps Scriptもよく使います。",
+      "React, Vueできます。Node.jsも多少。\nGoogle Apps Scriptはよく使います。",
     level: 5,
     icon: <JavaScriptIcon />,
   },
   {
+    lang: "HTML",
+    description:
+      "多数のウェブサイトを作成し、高校で使用したりしています。\nCSS(Sass)もある程度使えます。",
+    level: 5,
+    icon: <HTMLIcon />,
+  },
+  {
     lang: "C#",
     description:
-      "WPFでデスクトップアプリを作成しました。\n最近はあまり使用していない。",
+      "WPFでデスクトップアプリを作成しました。\n最近はあまり使用していないです。",
     level: 3,
     icon: <CSharpIcon />,
   },
   {
     lang: "Ruby",
-    description: "大規模な開発の経験はない。",
+    description: "大規模な開発の経験はないです。",
     level: 2,
     icon: <RubyIcon />,
   },
   {
     lang: "C",
-    description: "授業で扱い、それ以降触ってない。",
+    description: "授業で扱い、それ以降触ってないです。",
     level: 1,
     icon: <CIcon />,
   },
@@ -37,20 +44,23 @@ const skills = [
 function Skill() {
   return (
     <div id="skill" className="min-h-screen bg-white px-2">
-      <div className="mx-auto mt-8 max-w-4xl">
-        <h2 className="my-4 text-2xl font-bold text-gray-700">言語 - Skill</h2>
+      <div className="mx-auto pt-16 max-w-4xl">
+        <h2 className="my-4 text-2xl font-bold text-gray-700">Skill</h2>
+        <p className="leading-relaxed">
+          言語ごとに自分ができるスキルをまとめました。個人で開発をしていることもあり、フロントエンドが主ですが、バックエンドにも興味があります。クラウドサービスを主に使用し、サーバー等は所有する予定はありません。今後はフルスタックエンジニアに進む道を考えているので、AWSにも挑戦していきます。
+        </p>
         <div className="my-8 overflow-x-auto shadow">
           <table className="w-full text-left text-sm text-gray-700">
             <tbody>
               {skills.map(({ lang, description, level, icon }) => (
-                <tr key={lang} className="border-b">
+                <tr key={lang} className="whitespace-pre border-b">
                   <th scope="row" className="py-4 px-6">
                     <div className="flex">
                       {icon}
                       <div className="ml-2">{lang}</div>
                     </div>
                   </th>
-                  <td className="whitespace-pre py-4 px-6">{description}</td>
+                  <td className="py-4 px-6">{description}</td>
                   <td className="py-4 px-6">
                     <div className="flex text-yellow-500">
                       {[...Array(level)].map((_value, index) => (
@@ -69,14 +79,10 @@ function Skill() {
         <h2 className="my-8 text-2xl font-bold text-gray-700">
           その他 - Skill
         </h2>
-        <p>
-          Firebase Realtime
-          Databaseを使い、リアルタイムで交流できるゲームを作成した。
-        </p>
-        <p>
-          Google Apps Scriptを使い、Google Formsの自動入力ツールを作成した。
-          <br />
-          またGoogle Documentと組み合わせて先生方の連絡管理ツールを作成した。
+        <p className="text-gray-700 my-8">
+          Firebase, Google Apps Script, Vercel, Sass, JQuery, Linux（Ubuntu）,
+          Windows, MySQL, Git, Material UI, Bootstrap, Tailwindcss, Chakra,
+          React, Next.js, Vue, Discord API, Spigot, Bukkit
         </p>
       </div>
     </div>
@@ -512,6 +518,26 @@ function CIcon() {
       <path
         fill="#fff"
         d="M85.3 76.1C81.1 83.5 73.1 88.5 64 88.5c-13.5 0-24.5-11-24.5-24.5s11-24.5 24.5-24.5c9.1 0 17.1 5 21.3 12.5l13-7.5c-6.8-11.9-19.6-20-34.3-20-21.8 0-39.5 17.7-39.5 39.5s17.7 39.5 39.5 39.5c14.6 0 27.4-8 34.2-19.8l-12.9-7.6z"
+      ></path>
+    </svg>
+  );
+}
+
+function HTMLIcon() {
+  return (
+    <svg viewBox="0 0 128 128" className="h-5 w-5">
+      <path
+        fill="#E44D26"
+        d="M19.037 113.876L9.032 1.661h109.936l-10.016 112.198-45.019 12.48z"
+      ></path>
+      <path fill="#F16529" d="M64 116.8l36.378-10.086 8.559-95.878H64z"></path>
+      <path
+        fill="#EBEBEB"
+        d="M64 52.455H45.788L44.53 38.361H64V24.599H29.489l.33 3.692 3.382 37.927H64zm0 35.743l-.061.017-15.327-4.14-.979-10.975H33.816l1.928 21.609 28.193 7.826.063-.017z"
+      ></path>
+      <path
+        fill="#fff"
+        d="M63.952 52.455v13.763h16.947l-1.597 17.849-15.35 4.143v14.319l28.215-7.82.207-2.325 3.234-36.233.335-3.696h-3.708zm0-27.856v13.762h33.244l.276-3.092.628-6.978.329-3.692z"
       ></path>
     </svg>
   );
