@@ -44,7 +44,7 @@ const skills = [
 function Skill() {
   return (
     <div id="skill" className="min-h-screen bg-white px-2">
-      <div className="mx-auto pt-16 max-w-4xl">
+      <div className="mx-auto max-w-4xl pt-16">
         <h2 className="my-4 text-2xl font-bold text-gray-700">Skill</h2>
         <p className="leading-relaxed">
           言語ごとに自分ができるスキルをまとめました。個人で開発をしていることもあり、フロントエンドが主ですが、バックエンドにも興味があります。クラウドサービスを主に使用し、サーバー等は所有する予定はありません。今後はフルスタックエンジニアに進む道を考えているので、AWSにも挑戦していきます。
@@ -76,10 +76,8 @@ function Skill() {
             </tbody>
           </table>
         </div>
-        <h2 className="my-8 text-2xl font-bold text-gray-700">
-          その他 - Skill
-        </h2>
-        <p className="text-gray-700 my-8">
+        <h2 className="my-8 text-2xl font-bold text-gray-700">その他</h2>
+        <p className="my-8 text-gray-700">
           Firebase, Google Apps Script, Vercel, Sass, JQuery, Linux（Ubuntu）,
           Windows, MySQL, Git, Material UI, Bootstrap, Tailwindcss, Chakra,
           React, Next.js, Vue, Discord API, Spigot, Bukkit

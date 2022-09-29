@@ -1,0 +1,15 @@
+.scroll {
+  animation: down ease 2s infinite;
+}
+
+@keyframes down {
+  0% {
+    transform: translate(0);
+  }
+  25% {
+    transform: translateY(10px);
+  }
+  50% {
+    transform: translate(0);
+  }
+}

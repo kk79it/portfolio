@@ -1,7 +1,7 @@
 import { ReactElement } from "react";
 import Footer from "./footer";
 import Header from "./header";
-import SubMenu from "./SubMenu";
+import SubMenu from "./sub-menu";
 
 type Props = {
   children: ReactElement;
@@ -10,7 +10,7 @@ type Props = {
 function Layout({ children }: Props) {
   return (
     <div className="relative">
-      <div className="fixed bottom-0 right-0 z-50 pr-8 pb-8">
+      <div className="fixed bottom-0 right-0 z-50">
         <SubMenu />
       </div>
       <div className="fixed top-0 left-0 z-50 w-full">
