@@ -1,4 +1,5 @@
 import type { NextPage } from "next";
+import Head from "next/head";
 import { useEffect } from "react";
 import Layout from "../components/layout";
 import About from "../components/topics/about";
@@ -44,6 +45,9 @@ const Index: NextPage = () => {
   return (
     <Layout>
       <div>
+        <Head>
+          <title>ポートフォリオ - K-Lab.</title>
+        </Head>
         <Home />
         <About />
         <Skill />
